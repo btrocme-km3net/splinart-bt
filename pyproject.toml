@@ -67,8 +67,11 @@ twine = { cmd = "twine upload -r testpypi dist/*", depends-on = [
 numpy = ">=2.0.0,<2.1"
 matplotlib = ">=3.8.4,<3.9"
 
+[tool.pixi.feature.pypi-release.pypi-dependencies]  # Build is forced to be retrieved from pypi with release.pypi because it was too old via conda
+build = ">=1.5.0,<2"
+
 [tool.pixi.feature.pypi-release.dependencies]
-build = ">=0.7.0,<0.8"
+# build = ">=0.7.0,<0.8"
 twine = ">=5.1.1,<5.2"
 
 [tool.pixi.feature.conda-release.dependencies]
