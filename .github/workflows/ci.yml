@@ -12,14 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - uses: prefix-dev/setup-pixi@v0.9.6
-      with:
-        pixi-version: v0.66.0
-
-        cache: true
-        auth-host: prefix.dev
-        auth-token: ${{ secrets.PREFIX_DEV_TOKEN }}
-
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -35,6 +27,3 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-
-    - name: pixi test
-      run: pixi run test
