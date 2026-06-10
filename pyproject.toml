@@ -109,8 +109,11 @@ pytest-mpl = ">=0.17,<0.18"
 [tool.pixi.feature.tests.tasks]
 pytest = "cd tests; pytest --mpl --cov splinart"
 
+[tool.pixi.feature.publish.dependencies]
+pre-commit = "*"
+
 [tool.pixi.environments]
-publish = ["pypi-release", "conda-release"]
+publish = ["pypi-release", "conda-release", "publish"]
 linter = ["linter"]
 sphinx = ["sphinx"]
 tests = ["tests"]
