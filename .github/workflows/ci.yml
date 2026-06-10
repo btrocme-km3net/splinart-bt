@@ -15,4 +15,5 @@ jobs:
     - name: install-pixi
       uses: prefix-dev/setup-pixi@v0.9.6
 
-    - run: pixi run test
+    - name: test-pixi
+      run: pixi run test
